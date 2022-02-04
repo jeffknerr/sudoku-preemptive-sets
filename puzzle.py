@@ -375,11 +375,6 @@ def main():
     print("filtering markups...")
     puzz2.filtermarkups()
     puzz2.showmarkup()
-    print(puzz2)
-    puzz2.findpss()
-    puzz2.showpreemptivesets()
-    puzz2.filtermarkups()
-    puzz2.showmarkup()
     while not puzz2.solved():
         print(puzz2)
         puzz2.findpss()
@@ -388,6 +383,70 @@ def main():
         puzz2.showmarkup()
     print(puzz2)
 
+# two that don't solve yet...
+    diabolical = np.array([[0, 9, 0, 7, 0, 0, 8, 6, 0],
+                           [0, 3, 1, 0, 0, 5, 0, 2, 0],
+                           [8, 0, 6, 0, 0, 0, 0, 0, 0],
+                           [0, 0, 7, 0, 5, 0, 0, 0, 6],
+                           [0, 0, 0, 3, 0, 7, 0, 0, 0],
+                           [5, 0, 0, 0, 1, 0, 7, 0, 0],
+                           [0, 0, 0, 0, 0, 0, 1, 0, 9],
+                           [0, 2, 0, 6, 0, 0, 3, 5, 0],
+                           [0, 5, 4, 0, 0, 8, 0, 7, 0]])
+    puzz3 = Puzzle()
+    puzz3.setnums(diabolical)
+    print(puzz3)
+    """
+    done = False
+    while not done:
+        numchanged = puzz3.findforced()
+        if numchanged == 0:
+            done = True
+    print(puzz3)
+    print("solved?", puzz3.solved())
+    print("creating puzzle markup...")
+    puzz3.mark()
+    puzz3.showmarkup()
+    while not puzz3.solved():
+        print(puzz3)
+        puzz3.findpss()
+        puzz3.showpreemptivesets()
+        puzz3.filtermarkups()
+        puzz3.showmarkup()
+    print(puzz3)
+    """
+
+    beach = np.array([[0, 0, 0, 0, 0, 0, 0, 0, 1],
+                      [0, 0, 7, 0, 0, 3, 8, 0, 0],
+                      [2, 0, 0, 0, 0, 0, 0, 3, 0],
+                      [0, 9, 0, 6, 0, 4, 0, 1, 0],
+                      [0, 0, 6, 0, 1, 0, 5, 0, 0],
+                      [0, 3, 0, 9, 0, 7, 0, 6, 0],
+                      [0, 4, 0, 0, 8, 0, 0, 0, 2],
+                      [0, 0, 9, 5, 0, 0, 1, 0, 0],
+                      [3, 0, 0, 0, 0, 0, 0, 0, 9]])
+    puzz4 = Puzzle()
+    puzz4.setnums(beach)
+    print(puzz4)
+    """
+    done = False
+    while not done:
+        numchanged = puzz4.findforced()
+        if numchanged == 0:
+            done = True
+    print(puzz4)
+    print("solved?", puzz4.solved())
+    print("creating puzzle markup...")
+    puzz4.mark()
+    puzz4.showmarkup()
+    while not puzz4.solved():
+        print(puzz4)
+        puzz4.findpss()
+        puzz4.showpreemptivesets()
+        puzz4.filtermarkups()
+        puzz4.showmarkup()
+    print(puzz4)
+    """
 
 if __name__ == "__main__":
     main()
